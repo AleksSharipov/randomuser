@@ -1,5 +1,40 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  margin: 0;
+  padding: 0;
+}
+
+details {
+  margin-bottom: 10px;
+}
+
+summary {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  background: red;
+  color: white;
+  font-weight: inherit;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .App-logo {
@@ -7,32 +42,87 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.details__list {
+  /* width: 60%; */
+  min-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 300px;
+}
+
+.board__user {
+  width: 80%;
+}
+
+.users {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* border: 1px solid grey; */
+  margin: 5px 0;
+  
+}
+
+.user__element {
+  /* border: 1px solid green; */
+  width: 100%;
+  cursor: grab;
+  background: rgb(245,242,241);
+  min-height: 50px;
+  text-align: center;
+}
+
+.user__favorite {
+  /* border: 1px solid red; */
+  /* min-width: 50%; */
+}
+.favorite {
+  /* border: 1px solid red; */
+  /* min-width: 50%; */
+  width: 15%;
+  /* margin-top: 20px; */
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.user__card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.user__descr {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user__img {
+  object-fit: contain;
+  margin: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hightlight {
+  background-color: red;
 }
